@@ -1,9 +1,40 @@
-!Build/
+/.build/
+/_build/
+/Build
+/Build.bat
+/blib
+/Makefile
+/pm_to_blib
+
+/carton.lock
+/.carton/
+/local/
+
+nytprof.out
+nytprof/
+
+cover_db/
+
+*.bak
+*.old
+*~
+*.swp
+*.o
+*.obj
+
+!LICENSE
+
+/_build_params
+
+MYMETA.*
+
+/mojo-ioloop-thread-*
+
 .last_cover_stats
 /META.yml
 /META.json
 /MYMETA.*
-*.o
+
 *.pm.tdy
 *.bs
 
@@ -12,14 +43,6 @@ cover_db/
 
 # Devel::NYTProf
 nytprof.out
-
-# Dizt::Zilla
-/.build/
-
-# Module::Build
-_build/
-Build
-Build.bat
 
 # Module::Install
 inc/
@@ -33,3 +56,5 @@ inc/
 /MANIFEST.bak
 /pm_to_blib
 /*.zip
+
+.project
