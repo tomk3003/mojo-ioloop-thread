@@ -58,11 +58,52 @@ Mojo::IOLoop::Thread - Threaded Replacement for Mojo::IOLoop::subprocess
 
 =head1 SYNOPSIS
 
-    use Mojo::IOLoop::Thread;
+  use Mojo::IOLoop::Thread;
+
+  # Operation that would block the event loop for 5 seconds
+  my $subprocess = Mojo::IOLoop::Thread->new;
+  $subprocess->run(
+    sub {
+      my $subprocess = shift;
+      sleep 5;
+      return '♥', 'Mojolicious';
+    },
+    sub {
+      my ($subprocess, $err, @results) = @_;
+      say "Subprocess error: $err" and return if $err;
+      say "I $results[0] $results[1]!";
+    }
+  );
+
+  # Start event loop if necessary
+  $subprocess->ioloop->start unless $subprocess->ioloop->is_running;
+
+  or
+
+  use Mojo::IOLoop;
+  use Mojo::IOLoop::Thread;
+
+  my $iol = Mojo::IOLoop->new;
+  $iol->subprocess(
+    sub {'♥'},
+    sub {
+      my ($subprocess, $err, @results) = @_;
+      say "Subprocess error: $err" and return if $err;
+      say @results;
+    }
+  );
+  $loop->start;
 
 =head1 DESCRIPTION
 
-Mojo::IOLoop::Thread is ...
+L<Mojo::IOLoop::Thread> is a multithreaded alternative for
+L<Mojo::IOLoop::Subprocess> which is not available under Win32.
+It is a dropin replacement, takes the same parameters and works
+analoguous by just using threads instead of forked processes.
+
+L<Mojo::IOLoop::Thread> replaces the B<subprocess> method of L<Mojo::IOLoop>
+with a threaded version on module load. Please make sure that you load
+L<Mojo::IOLoop> first.
 
 =head1 AUTHOR
 

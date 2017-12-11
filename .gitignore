@@ -58,3 +58,5 @@ inc/
 /*.zip
 
 .project
+.includepath
+
