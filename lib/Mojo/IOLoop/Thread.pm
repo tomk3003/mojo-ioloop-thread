@@ -101,9 +101,9 @@ L<Mojo::IOLoop::Subprocess> which is not available under Win32.
 It is a dropin replacement, takes the same parameters and works
 analoguous by just using threads instead of forked processes.
 
-L<Mojo::IOLoop::Thread> replaces the B<subprocess> method of L<Mojo::IOLoop>
-with a threaded version on module load. Please make sure that you load
-L<Mojo::IOLoop> first.
+L<Mojo::IOLoop::Thread> replaces the L<Mojo::IOLoop/subprocess> method of
+L<Mojo::IOLoop> with a threaded version on module load. Please make sure
+that you load L<Mojo::IOLoop> first.
 
 =head1 AUTHOR
 
