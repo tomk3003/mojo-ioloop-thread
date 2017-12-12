@@ -2,9 +2,14 @@ Revision history for Perl extension Mojo-IOLoop-Thread
 
 {{$NEXT}}
 
+0.03 2017-12-12T14:57:42Z
+
+    - add link to Mojo::IOLoop/subprocess
+
 0.02 2017-12-12T13:13:14Z
+
+    - update docs and dependencies
 
 0.01 2017-12-11T11:55:47Z
 
     - original version
-

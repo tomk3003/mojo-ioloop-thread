@@ -48,9 +48,9 @@ or
 It is a dropin replacement, takes the same parameters and works
 analoguous by just using threads instead of forked processes.
 
-[Mojo::IOLoop::Thread](https://metacpan.org/pod/Mojo::IOLoop::Thread) replaces the **subprocess** method of [Mojo::IOLoop](https://metacpan.org/pod/Mojo::IOLoop)
-with a threaded version on module load. Please make sure that you load
-[Mojo::IOLoop](https://metacpan.org/pod/Mojo::IOLoop) first.
+[Mojo::IOLoop::Thread](https://metacpan.org/pod/Mojo::IOLoop::Thread) replaces the ["subprocess" in Mojo::IOLoop](https://metacpan.org/pod/Mojo::IOLoop#subprocess) method of
+[Mojo::IOLoop](https://metacpan.org/pod/Mojo::IOLoop) with a threaded version on module load. Please make sure
+that you load [Mojo::IOLoop](https://metacpan.org/pod/Mojo::IOLoop) first.
 
 # AUTHOR
 
