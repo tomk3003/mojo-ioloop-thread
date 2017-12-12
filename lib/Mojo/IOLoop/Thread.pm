@@ -1,7 +1,7 @@
 package Mojo::IOLoop::Thread;
 use Mojo::Base -base;
 
-our $VERSION = "0.01";
+our $VERSION = "0.02";
 
 use threads;
 
@@ -78,7 +78,7 @@ Mojo::IOLoop::Thread - Threaded Replacement for Mojo::IOLoop::subprocess
   # Start event loop if necessary
   $subprocess->ioloop->start unless $subprocess->ioloop->is_running;
 
-  or
+or
 
   use Mojo::IOLoop;
   use Mojo::IOLoop::Thread;

@@ -1,11 +1,15 @@
 use Mojo::Base -strict;
 
-BEGIN { $ENV{MOJO_REACTOR} = 'Mojo::Reactor::Poll' }
-
 use FindBin qw($Bin);
 use lib "$Bin/../lib";
 
 use Test::More;
+
+BEGIN {
+    BAIL_OUT("OS unsupported\n")
+        unless $^O eq "MSWin32" || $^O eq "cygwin";
+    $ENV{MOJO_REACTOR} = 'Mojo::Reactor::Poll'
+}
 
 use Mojo::IOLoop;
 use Mojo::IOLoop::Thread;
