@@ -54,7 +54,7 @@ __END__
 
 =head1 NAME
 
-Mojo::IOLoop::Thread - Threaded Replacement for Mojo::IOLoop::subprocess
+Mojo::IOLoop::Thread - Threaded Replacement for Mojo::IOLoop::Subprocess
 
 =head1 SYNOPSIS
 
