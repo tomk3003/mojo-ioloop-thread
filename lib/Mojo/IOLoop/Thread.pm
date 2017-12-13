@@ -7,10 +7,10 @@ use threads;
 
 use Scalar::Util qw(weaken);
 use Mojo::IOLoop;
-
+use Mojo::Util qw(monkey_patch);
 BEGIN {
     ## no critic ( PrivateSubs )
-    Mojo::Base::_monkey_patch 'Mojo::IOLoop', subprocess => sub {
+    monkey_patch 'Mojo::IOLoop', subprocess => sub {
         my $thr = Mojo::IOLoop::Thread->new;
         weaken $thr->ioloop(Mojo::IOLoop::_instance(shift))->{ioloop};
         return $thr->run(@_);
