@@ -1,7 +1,7 @@
 [![Build Status](https://img.shields.io/appveyor/ci/tomk3003/mojo-ioloop-thread/master.svg)](https://ci.appveyor.com/project/tomk3003/mojo-ioloop-thread/branch/master)
 # NAME
 
-Mojo::IOLoop::Thread - Threaded Replacement for Mojo::IOLoop::subprocess
+Mojo::IOLoop::Thread - Threaded Replacement for Mojo::IOLoop::Subprocess
 
 # SYNOPSIS
 

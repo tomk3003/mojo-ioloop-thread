@@ -1,7 +1,7 @@
 package Mojo::IOLoop::Thread;
 use Mojo::Base -base;
 
-our $VERSION = "0.04";
+our $VERSION = "0.05";
 
 use threads;
 

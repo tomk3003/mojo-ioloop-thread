@@ -2,6 +2,12 @@ Revision history for Perl extension Mojo-IOLoop-Thread
 
 {{$NEXT}}
 
+0.05 2017-12-13T07:38:05Z
+
+    - fix wrong dependency on Mojo::Base::monkey_patch
+
+    - fix typo
+
 0.04 2017-12-12T15:06:29Z
 
     - update doc
