@@ -20,7 +20,6 @@ BEGIN {
 use Carp 'croak';
 use Config;
 use Storable;
-use YAML qw(Dump);
 
 has deserialize => sub { \&Storable::thaw };
 has ioloop      => sub { Mojo::IOLoop->singleton };
