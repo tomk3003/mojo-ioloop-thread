@@ -1,5 +1,7 @@
 Revision history for Perl extension Mojo-IOLoop-Thread
 
+{{NEXT}}
+
 0.07 2018-11-27T11:16:53Z
 
     - synch with Mojolicious 8.07
