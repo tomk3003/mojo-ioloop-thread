@@ -1,6 +1,10 @@
 Revision history for Perl extension Mojo-IOLoop-Thread
 
-{{NEXT}}
+{{$NEXT}}
+
+0.08 2018-11-27T12:08:56Z
+
+    - add progress tests
 
 0.07 2018-11-27T11:16:53Z
 
