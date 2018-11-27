@@ -19,7 +19,7 @@ my ($fail, $result, @start);
 my $subprocess = Mojo::IOLoop::Thread->new;
 $subprocess->on(spawn => sub { push @start, shift->pid });
 $subprocess->run(
-  sub { shift->pid . ('x' x 10) },
+  sub { shift->pid . ('x' x 100000) },
   sub {
     my ($subprocess, $err, $two) = @_;
     $fail = $err;
@@ -31,7 +31,7 @@ ok !$subprocess->pid, 'no process id available yet';
 Mojo::IOLoop->start;
 ok $subprocess->pid, 'process id available';
 ok !$fail, 'no error';
-is $result, $$ . $subprocess->pid . ('x' x 10), 'right result';
+is $result, $$ . $subprocess->pid . ('x' x 100000), 'right result';
 is_deeply \@start, [$subprocess->pid], 'spawn event has been emitted once';
 
 # Custom event loop
