@@ -60,3 +60,5 @@ inc/
 .project
 .includepath
 
+/.idea/
+/_Deparsed_XSubs.pm

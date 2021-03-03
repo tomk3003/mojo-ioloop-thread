@@ -1,0 +1,11 @@
+appveyor.yml
+Changes
+lib/Mojo/IOLoop/Thread.pm
+LICENSE
+Makefile.PL
+MANIFEST			This list of files
+MANIFEST.SKIP
+META.json
+Mojo-IOLoop-Thread-0.10/META.json
+Mojo-IOLoop-Thread-0.10/META.yml
+t/01_basic.t
