@@ -10,3 +10,4 @@
 ^travis.yml
 ^appveyor.yml
 ^\.gitignore
+^_Deparsed_XSubs.pm
